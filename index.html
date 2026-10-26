@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Quizzy — little quizzes, big brain</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Quizzy home"><span class="brand-mark">q</span><span>quizzy<span class="brand-dot">.</span></span></a>
+    <div class="top-right"><span class="streak"><span>✦</span> <b id="streak">3</b> day streak</span><button class="avatar" aria-label="Your profile">J</button></div>
+  </header>
+
+  <main id="home" class="shell">
+    <section class="welcome">
+      <div><p class="eyebrow">MONDAY, OCTOBER 26 <span class="eyebrow-spark">✳</span></p><h1>Your brain called.<br><span>It wants to play.</span></h1><p class="intro">A little curiosity goes a long way. Pick a quiz and see where it takes you.</p></div>
+      <div class="hero-art" aria-hidden="true"><div class="sun"></div><span class="orbit orbit-one">✦</span><span class="orbit orbit-two">✳</span><span class="orbit orbit-three">?</span><div class="brain">🧠</div><span class="tiny-star">✦</span></div>
+    </section>
+
+    <section class="daily-card">
+      <div class="daily-icon">⚡</div><div class="daily-copy"><span class="tag">TODAY'S PICK</span><h2>The 2-minute brain break</h2><p>Five questions. Zero pressure. Maximum bragging rights.</p></div><button class="button button-dark" data-start="mix">Let's go <span>↗</span></button><div class="card-decoration">✳</div>
+    </section>
+
+    <section class="quiz-section">
+      <div class="section-heading"><div><p class="eyebrow">FIND YOUR NEXT OBSESSION</p><h2>Pick your flavor</h2></div><span class="quiz-count">6 quizzes <span>·</span> all bite-sized</span></div>
+      <div class="filters" role="group" aria-label="Filter quizzes"><button class="filter active" data-filter="all">All quizzes <span>6</span></button><button class="filter" data-filter="curious">Curious</button><button class="filter" data-filter="culture">Pop culture</button><button class="filter" data-filter="just-for-fun">Just for fun</button></div>
+      <div class="quiz-grid" id="quiz-grid"></div>
+    </section>
+    <footer><span class="brand-mini">q.</span><span>Made for curious minds.</span><span class="footer-right">No grades. Just good vibes <span>♡</span></span></footer>
+  </main>
+
+  <div class="modal" id="quiz-modal" aria-hidden="true"><div class="modal-backdrop" data-close></div><section class="quiz-panel" role="dialog" aria-modal="true" aria-labelledby="question-title"><button class="close-button" data-close aria-label="Close quiz">×</button><div id="quiz-content"></div></section></div>
+  <script src="app.js"></script>
+</body>
+</html>
